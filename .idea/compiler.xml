@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="jdbcfororm" />
         <module name="hibernateorm" />
+        <module name="JavaPersistenceAPI" />
       </profile>
     </annotationProcessing>
   </component>

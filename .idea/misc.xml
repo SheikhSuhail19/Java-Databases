@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/jdbc for orm/pom.xml" />
         <option value="$PROJECT_DIR$/hibernate/pom.xml" />
+        <option value="$PROJECT_DIR$/Java Persistence API/pom.xml" />
       </list>
     </option>
   </component>

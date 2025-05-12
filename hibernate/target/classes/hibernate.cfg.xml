@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/ipce</property>
+        <property name="hibernate.connection.username">ipce</property>
+        <property name="hibernate.connection.password">ipce</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <property name="hibernate.default_schema">h8</property>
+
+<!--        <property name="hibernate.cache.use_second_level_cache">true</property>-->
+<!--        <property name="hibernate.cache.use_query_cache">true</property>-->
+<!--        <property name="hibernate.cache.region.factory_class">-->
+<!--            org.hibernate.cache.jcache.internal.JCacheRegionFactory-->
+<!--        </property>-->
+
+<!--        <property name="hibernate.javax.cache.uri">-->
+<!--            ehcache.xml-->
+<!--        </property>-->
+<!--        <property name="hibernate.javax.cache.provider">-->
+<!--            org.ehcache.jsr107.EhcacheCachingProvider-->
+<!--        </property>-->
+
+        <!-- Annotated classes -->
+        <mapping class="org.java.hibernate.crud.User"/>
+        <mapping class="org.java.hibernate.primarykeystrategies.UserIdentity"/>
+        <mapping class="org.java.hibernate.primarykeystrategies.UserSequence"/>
+        <mapping class="org.java.hibernate.primarykeystrategies.UserTable"/>
+        <mapping class="org.java.hibernate.primarykeystrategies.UserAuto"/>
+        <mapping class="org.java.hibernate.primarykeystrategies.UserUUID"/>
+
+        <mapping class="org.java.hibernate.common.Student"/>
+        <mapping class="org.java.hibernate.compositekey.Enrollment"/>
+        <mapping class="org.java.hibernate.optimisticlocking.versioning.Employee"/>
+        <mapping class="org.java.hibernate.querying.EmployeeTest"/>
+
+        <mapping class="org.java.hibernate.eventlistners.AuditLog"/>
+
+    </session-factory>
+</hibernate-configuration>
